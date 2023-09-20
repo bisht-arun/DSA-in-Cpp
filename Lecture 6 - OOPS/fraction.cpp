@@ -57,9 +57,5 @@ int main()
     f2.print();
 
 
-    Fraction *f3=new Fraction(20,4);    
-    f1.add(*f3); 
-    f1.print();
-    (*f3).print();
 
 }    
