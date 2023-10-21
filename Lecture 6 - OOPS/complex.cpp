@@ -28,8 +28,19 @@ class Complex
 
     void multiply(const Complex &C)
     {
-        real = real * C.real;
-        imag = imag * C.imag;
+        int r1,r2,img1,img2;
+
+        r1 = real * C.real;
+        img1 = real * C.imag;
+
+        r2 = imag * C.imag;
+        img2 = imag * C.real;
+
+        //adding
+
+        real = r1 + r2;
+        imag = img1 + img2;
+
     }
 };
 
