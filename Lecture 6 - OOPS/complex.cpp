@@ -38,7 +38,7 @@ class Complex
 
         //adding
 
-        real = r1 + r2;
+        real = r1 + (-1)*r2;
         imag = img1 + img2;
 
     }
