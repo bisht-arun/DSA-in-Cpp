@@ -39,8 +39,8 @@ int main()
     int imag1,imag2;
     
     cout<<"Enter the Complex number : "<<endl;
-    cin>>real1>>real2;
-    cin>>imag1>>imag2;
+    cin>>real1>>imag1;
+    cin>>real2>>imag2;
 
     Complex C1(real1,imag1);
     Complex C2(real2,imag2);
