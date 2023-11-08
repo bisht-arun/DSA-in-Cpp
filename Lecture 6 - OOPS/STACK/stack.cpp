@@ -1,4 +1,5 @@
 #include <iostream>
+#include <climits>
 using namespace std;
 
 class StackusingArray
@@ -27,7 +28,15 @@ public:
 
     int top()
     {
-        return data[nextindex];
+        if (isempty())
+        {
+            cout << "Stack is empty " << endl;
+            return INT_MIN;
+        }
+        else
+        {
+            return data[nextindex - 1];
+        }
     }
 
     void push(int element)
@@ -46,15 +55,15 @@ public:
 
     int pop()
     {
-        if (nextindex == 0)
+        if (isempty())
         {
             cout << "Stack is empty " << endl;
-            // return;
+            return INT_MIN;
         }
         else
         {
-            return data[nextindex];
             nextindex--;
+            return data[nextindex];
         }
     }
 };
