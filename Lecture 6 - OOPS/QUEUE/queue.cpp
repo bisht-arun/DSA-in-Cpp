@@ -1,5 +1,5 @@
 #include <iostream>
-#include <climits>
+// #include <climits>
 using namespace std;
 
 class QueueusingArray
@@ -31,7 +31,8 @@ public:
         if (isempty())
         {
             cout << " Queue is empty " << endl;
-            return INT_MIN;
+            // return INT_MIN;
+            return -1;
         }
         else
         {
@@ -57,7 +58,8 @@ public:
         if (isempty())
         {
             cout << " Queue is empty " << endl;
-            return INT_MIN;
+            // return INT_MIN;
+            return -1;
         }
         else
         {
@@ -78,6 +80,8 @@ int main()
     q.enqueue(50);
     q.enqueue(60);
 
+    cout << q.dequeue() << endl;
+    cout << q.dequeue() << endl;
     cout << q.dequeue() << endl;
     cout << q.dequeue() << endl;
     cout << q.dequeue() << endl;
