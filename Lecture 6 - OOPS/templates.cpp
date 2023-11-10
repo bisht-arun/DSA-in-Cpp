@@ -1,4 +1,4 @@
-template <typeanme T>
+template <typename T>
 
 class Pair
 {

@@ -1,5 +1,5 @@
 #include <iostream>
-#include <template.cpp>
+#include "templates.cpp"
 using namespace std;
 
 int main()
