@@ -1,9 +1,9 @@
-template <typename T>
+template <typename T, typename V>
 
 class Pair
 {
     T x;
-    T y;
+    V y;
 
 public:
     void setX(T x)
@@ -16,12 +16,12 @@ public:
         return x;
     }
 
-    void setY(T y)
+    void setY(V y)
     {
         this->y = y;
     }
 
-    T getY()
+    V getY()
     {
         return y;
     }
@@ -32,10 +32,13 @@ using namespace std;
 
 int main()
 {
-    Pair<int> p1;
+    Pair<Pair<int, int>, int> p1; // triplet
 
-    p1.setX(10);
     p1.setY(20);
+    Pair<int, int> p2;
+    p2.setX(10);
+    p2.setY(15);
+    p1.setX(p2);
 
-    cout << p1.getX() << " " << p1.getY() << endl;
+    cout << p1.getX().getX() << " " << p1.getX().getY() << " " << p1.getY() << endl;
 }
