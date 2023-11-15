@@ -25,14 +25,17 @@ public:
 
     int getsize()
     {
+        return size;
     }
 
     bool isempty()
     {
+        return head == NULL;
     }
 
     int top()
     {
+        return head->data;
     }
 
     void push(int element)
@@ -41,6 +44,16 @@ public:
 
     int pop()
     {
+        if (head == NULL)
+        {
+            cout << "List is Empty " << endl;
+        }
+        else
+        {
+            return head->data;
+            delete head;
+            head = head->next;
+        }
     }
 };
 
