@@ -16,12 +16,14 @@ class Node
 class StackusingLinkedList
 {
     Node *head;
-    int size = 0;
 
 public:
     StackusingLinkedList()
     {
+        head = NULL;
     }
+
+    int size = 0;
 
     int getsize()
     {
@@ -40,6 +42,12 @@ public:
 
     void push(int element)
     {
+        {
+            Node *new_node = new Node();
+            new_node->data = element;
+            new_node->next = (*head);
+            (*head) = new_node;
+        }
     }
 
     int pop()
@@ -50,16 +58,19 @@ public:
         }
         else
         {
-            return head->data;
+            int ans;
+            ans = head->data;
+            return ans;
             delete head;
             head = head->next;
+            size--;
         }
     }
 };
 
 int main()
 {
-    StackusingLinkedList() s;
+    StackusingLinkedList s();
     s.push(10);
     s.push(20);
     s.push(30);
