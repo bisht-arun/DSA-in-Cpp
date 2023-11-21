@@ -3,12 +3,13 @@ using namespace std;
 
 class Node
 {
+public:
     int data;
     Node *next;
 
-    Node(int data)
+    Node(int val)
     {
-        this->data = data;
+        data = val;
         next = NULL;
     }
 };
@@ -16,6 +17,7 @@ class Node
 class StackusingLinkedList
 {
     Node *head;
+    Node *new_node;
 
 public:
     StackusingLinkedList()
@@ -40,14 +42,15 @@ public:
         return head->data;
     }
 
-    void push(int element)
+    void push(Node *&head, int val)
     {
+        new_node = new Node(val);
+        if (head == NULL)
         {
-            Node *new_node = new Node();
-            new_node->data = element;
-            new_node->next = (*head);
-            (*head) = new_node;
+            head = new_node;
         }
+        new_node->data = val;
+        new_node->next = head;
     }
 
     int pop()
