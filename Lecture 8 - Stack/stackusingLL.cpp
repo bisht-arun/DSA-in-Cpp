@@ -39,7 +39,7 @@ public:
 
     int top()
     {
-        return head->data;
+        return head.next->data;
     }
 
     void push(Node *&head, int val)
