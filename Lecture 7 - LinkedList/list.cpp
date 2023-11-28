@@ -9,6 +9,27 @@ public:
 
     Node(int data)
     {
+        this->data = data;
         next = NULL;
     }
 };
+
+int main()
+{
+    Node n1(1);
+    Node n2(2);
+    Node n3(3);
+    Node n4(4);
+    Node n5(5);
+
+    n1.next = &n2;
+    n2.next = &n3;
+    n3.next = &n4;
+    n4.next = &n5;
+
+    cout << n1.data << endl;
+    cout << n2.data << endl;
+    cout << n3.data << endl;
+    cout << n4.data << endl;
+    cout << n5.data << endl;
+}
